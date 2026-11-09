@@ -1,0 +1,19 @@
+{
+  "name": "timestamp-for-suno",
+  "version": "1.0.0",
+  "description": "Display exact song creation timestamps inline on Suno (Create / Workspaces / Library / Song Detail).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "package": "node scripts/build.mjs && cd dist && zip -r ../timestamp-for-suno.zip . -x '*.DS_Store'",
+    "test": "node --import ./scripts/register-ts.mjs --test tests/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^20.17.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.2"
+  }
+}
